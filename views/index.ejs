@@ -1,0 +1,13 @@
+    <%-include('includes/header')%>
+    <h2>Open rules</h2>
+    <%categories.map(category => {%>
+        <div>
+            <h3><%=category.name%></h3>
+            <ul>
+            <% category.roles.map(role =>{%>
+                <li><a href="/vaga/<%=role.id%>"><%=role.name%></a></li>
+            <%})%>
+            </ul>
+        </div>
+    <%})%>
+    <%-include('includes/footer')%>

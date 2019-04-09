@@ -1,0 +1,12 @@
+    <%-include('includes/header')%>
+    <h2>Admin Vagas: <a href="/admin/categorias/nova">Nova Categoria</a></h2>
+    <div>
+        <ul>
+        <% categories.map(category =>{%>
+            <li><%=category.name%>
+            | <a href="/admin/categorias/excluir/<%=category.id%>">Excluir</a>
+            | <a href="/admin/categorias/editar/<%=category.id%>">Editar</a></li>
+        <%})%>
+        </ul>
+    </div>
+    <%-include('includes/footer')%>

@@ -1,0 +1,20 @@
+    <%-include('includes/header')%>
+    <h2>
+        Nova vaga:
+        <a href="/admin/vagas">Vagas</a>
+    </h2>
+    <div>
+        <form method="POST">
+            <label>Titulo:</label>
+            <input type="text" name="title">
+            <label>Descrição:</label>
+            <textarea name="description"></textarea>
+            <select name="category">
+                <% categories.map(category => {%>
+                    <option value="<%=category.id%>"><%=category.name%></option>
+                <%})%>
+            </select>
+            <button type="sumit">Enviar</button>
+        </form>
+    </div>
+    <%-include('includes/footer')%>

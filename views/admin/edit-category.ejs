@@ -1,0 +1,12 @@
+    <%-include('includes/header')%>
+    <h2>
+        Editar Categoria:
+        <a href="/admin/categorias">Categorias</a>
+    </h2>
+    <div>
+        <form method="POST">
+            <input name="name" value="<%-name%>"/>
+            <button type="submit">Salvar</button>
+        </form>
+    </div>
+    <%-include('includes/footer')%>

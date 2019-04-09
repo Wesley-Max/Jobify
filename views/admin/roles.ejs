@@ -1,0 +1,12 @@
+    <%-include('includes/header')%>
+    <h2>Admin Vagas: <a href="/admin/vagas/nova">Nova vaga</a></h2>
+    <div>
+        <ul>
+        <% roles.map(role =>{%>
+            <li><%=role.name%>
+            | <a href="/admin/vagas/excluir/<%=role.id%>">Excluir</a>
+            | <a href="/admin/vagas/editar/<%=role.id%>">Editar</a></li>
+        <%})%>
+        </ul>
+    </div>
+    <%-include('includes/footer')%>
